@@ -7,6 +7,8 @@ tags: [updates, weekly-report]
 
 Hello everyone, here is the weekly report for [BeyondStorage](https://beyondstorage.io), range from 2021-05-31 to 2021-06-04.
 
+<!--truncate-->
+
 ## Library
 
 ### Feature Gates
@@ -47,7 +49,7 @@ For more details, please refer to <https://beyondstorage.io/community/events/osp
 
 [specs]: https://github.com/beyondstorage/specs
 
-[go-service-qingsor]: https://github.com/beyondstorage/go-service-qingstor
+[go-service-qingstor]: https://github.com/beyondstorage/go-service-qingstor
 
 [GSP-47]: https://github.com/beyondstorage/specs/blob/master/rfcs/47-additional-error-specification.md
 
