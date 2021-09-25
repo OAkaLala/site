@@ -9,7 +9,7 @@
   display: inline-block;
   padding-right: 2px;
 
-  background-image: url('/img/underline.svg');
+  background-image: url("/img/underline.svg");
   background-repeat: no-repeat;
   background-position: right bottom;
 }
@@ -40,7 +40,6 @@
   min-width: var(--main-modules-width);
 }
 
-
 /* introduction */
 .introduction {
   width: var(--main-modules-width);
@@ -54,7 +53,7 @@
   padding: 0 12px;
   height: 44px;
 
-  background: #F1E759;
+  background: #f1e759;
   border-radius: 2px;
 
   font-weight: 300;
@@ -87,20 +86,21 @@
 }
 
 .introductionOpen {
-  background-color: #2B99FF;
+  background-color: #2b99ff;
 }
 
 .introductionNeutral {
-  background-color: #2DD482;
+  background-color: #2dd482;
 }
 
 .introductionUserCentrality {
-  background-color: #8D67FD;
+  background-color: #8d67fd;
 }
 
 /* architecture */
 
-.architecture, .projects {
+.architecture,
+.projects {
   display: block;
   width: var(--main-modules-width);
   margin: 0px auto var(--main-modules-gap);
@@ -110,7 +110,6 @@
 .architecture img {
   min-width: var(--main-modules-width);
 }
-
 /* projects */
 
 .projects h1 {
@@ -118,9 +117,7 @@
   margin-bottom: 60px;
   line-height: 3.25rem;
   padding-right: 2px;
-
   font-size: 2.25rem;
-
   background-image: url('/img/underline1.svg');
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -142,6 +139,9 @@
 .projectsContent > div > img, .projectsContent > div > p {
   margin-bottom: 32px;
 }
+.projectsContent > div > p {
+  min-height: 60px;
+}
 
 .projectsContent h2 {
   margin-bottom: 20px;
@@ -149,12 +149,13 @@
 
 .projectsContent ul {
   flex-grow: 1;
-
+  width: 95%;
   display: inline-block;
   text-align: left;
 }
 
 .projectsContent ul li {
+  min-height: 70px;
   margin-bottom: 24px;
 }
 
@@ -184,8 +185,26 @@
   .introductionContent, .projects, .projectsContent {
     display: block;
   }
+  .projectsContent ul {
+    width: 60%;
+  }
+  .projectsContent ul li {
+    min-height: 30px;
+  }
+  .projectsContent > div > p {
+    min-height: 30px;
+  }
+  .projectsContent a {
+      margin-bottom: 3.75rem;
+  }
 
   .introductionContent > div {
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .projectsContent ul {
+    width: 80%;
   }
 }

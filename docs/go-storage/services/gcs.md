@@ -12,11 +12,11 @@
 
 | Name | Required | Comments |
 | ---- | -------- | -------- |
-| [credential](go-storage/pairs/credential.md) | Y | support `base64` and `file` protocol: `base64` is the base64 of token content, `file` is the absolute path to token file. |
+| [credential](../pairs/credential.md) | Y | support `base64` and `file` protocol: `base64` is the base64 of token content, `file` is the absolute path to token file. |
 
 #### Examples
 
-Init servicer (see [this page](go-storage/operations/index.md#how-to-initialize-a-servicerstorager) for details)
+Init servicer (see [this page](../operations/index.md#how-to-initialize-a-servicerstorager) for details)
 
 ```go
 import (
@@ -36,13 +36,13 @@ if err != nil {
 
 | Name | Required | Comments |
 | ---- | -------- | -------- |
-| [name](go-storage/pairs/name.md) | Y | bucket name |
-| [work_dir](go-storage/pairs/work_dir.md) | N | work dir |
-| `project` | Y | google cloud project id |
+| [name](../pairs/name.md) | Y | bucket name |
+| [work_dir](../pairs/work_dir.md) | N | work dir |
+| `project_id` | Y | google cloud project id |
 
 #### Examples
 
-Init storager (see [this page](go-storage/operations/index.md#how-to-initialize-a-servicerstorager) for details)
+Init storager (see [this page](../operations/index.md#how-to-initialize-a-servicerstorager) for details)
 
 ```go
 import (
@@ -50,7 +50,7 @@ import (
 	"github.com/beyondstorage/go-storage/v4/services"
 )
 
-store, err := services.NewStoragerFromString("gcs://<bucket_name>/<work_dir>?credential=file:<absolute_path_to_token_file>&project=<google_cloud_project_id>")
+store, err := services.NewStoragerFromString("gcs://<bucket_name>/<work_dir>?credential=file:<absolute_path_to_token_file>&project_id=<google_cloud_project_id>")
 if err != nil {
     log.Fatalf("gcs new service: %v", err)
 }

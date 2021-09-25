@@ -25,25 +25,29 @@ We have connection string support.
 
 The format of the connection string is (optional parts marked by squared brackets):
 
-`<type>://[<name>][<work_dir>][?key1=value1&...&keyN=valueN]`
+`<type>://[<name>][<work_dir>][?enable_feature1&...&enable_featureN&key1=value1&...&keyN=valueN]`
 
 - name: storage name, e.g., bucket name. MUST NOT contain /
 - work_dir: For object storage, it is prefix; for fs, it is directory path. MUST start with / for every storage services.
+- For the `enable_feature` query string:
+  - `feature` is the feature name defined in `toml`, and the format SHOULD be exactly the same.
 - For the `key=value` pairs:
   - If `=value` is missing, we just ignore the pair. But `key=` means a pair with a blank value.
   - The `key` is the pair name defined in `toml` and the format SHOULD be exactly the same.
-- If their are multiple pairs with the same key, the first one will be picked.
+  - Or the `key` is the default pair name prefixed with `default_` and followed by pair name described above.
+- If there are multiple pairs with the same key, the first one will be picked.
 
 So a valid connection string could be:
 
 - `s3://bucket_name`
 - `s3://bucket_name/prefix`
-- `s3://?credential=hmac:xxxx:xxxx&endpoint=http://s3.us-east-2.amazonaws.com`
-- `s3://bucket_name/prefix?credential=hmac:xxxx:xxxx&endpoint=http://s3.us-east-2.amazonaws.com`
+- `s3://?credential=hmac:xxxx:xxxx&endpoint=http:s3.us-east-2.amazonaws.com`
+- `s3://bucket_name/prefix?credential=hmac:xxxx:xxxx&endpoint=http:s3.us-east-2.amazonaws.com`
+- `s3://bucket_name/prefix?enable_virtual_dir&credential=hmac:xxxx:xxxx&endpoint=http:s3.us-east-2.amazonaws.com&default_storage_class=STANDARD`
 - `fs://`
 - `fs:///tmp`
 
-For more details, take a look at [GSP-90](https://github.com/beyondstorage/specs/blob/master/rfcs/90-re-support-initialization-via-connection-string.md).
+For more details, take a look at [GSP-90](https://github.com/beyondstorage/specs/blob/master/rfcs/90-re-support-initialization-via-connection-string.md) and [GSP-700](https://github.com/beyondstorage/go-storage/blob/master/docs/rfcs/700-config-features-and-defaultpairs-via-connection-string.md).
 
 :::caution
 

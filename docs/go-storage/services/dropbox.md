@@ -12,12 +12,12 @@
 
 | Name | Required | Comments |
 | ---- | -------- | -------- |
-| [credential](go-storage/pairs/credential.md) | Y | only support `api_key` protocol |
-| [work_dir](go-storage/pairs/work_dir.md) | N | work dir |
+| [credential](../pairs/credential.md) | Y | only support `api_key` protocol |
+| [work_dir](../pairs/work_dir.md) | N | work dir |
 
 #### Examples
 
-Init storager (see [this page](go-storage/operations/index.md#how-to-initialize-a-servicerstorager) for details)
+Init storager (see [this page](../operations/index.md#how-to-initialize-a-servicerstorager) for details)
 
 ```go
 import (

@@ -12,12 +12,12 @@
 
 | Name | Required | Comments |
 | ---- | -------- | -------- |
-| [credential](go-storage/pairs/credential.md) | Y | only support `hmac` protocol |
-| [endpoint](go-storage/pairs/endpoint.md) | Y | |
+| [credential](../pairs/credential.md) | Y | only support `hmac` protocol |
+| [endpoint](../pairs/endpoint.md) | Y | |
 
 #### Examples
 
-Init servicer (see [this page](go-storage/operations/index.md#how-to-initialize-a-servicerstorager) for details)
+Init servicer (see [this page](../operations/index.md#how-to-initialize-a-servicerstorager) for details)
 
 ```go
 import (
@@ -37,12 +37,12 @@ if err != nil {
 
 | Name | Required | Comments |
 | ---- | -------- | -------- |
-| [name](go-storage/pairs/name.md) | Y | bucket name |
-| [work_dir](go-storage/pairs/work_dir.md) | N | work dir |
+| [name](../pairs/name.md) | Y | bucket name |
+| [work_dir](../pairs/work_dir.md) | N | work dir |
 
 #### Examples
 
-Init storager (see [this page](go-storage/operations/index.md#how-to-initialize-a-servicerstorager) for details)
+Init storager (see [this page](../operations/index.md#how-to-initialize-a-servicerstorager) for details)
 
 ```go
 import (

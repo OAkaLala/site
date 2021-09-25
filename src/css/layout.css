@@ -23,15 +23,22 @@
   }
 }
 
+@media (max-width: 1076px) {
+  .menu--responsive .menu__button, .navbar__toggle {
+    display: inherit;
+  }
+
+  .navbar__item {
+    display: none;
+  }
+}
+
 .navbar__brand {
   margin-right: 2.75rem;
 }
 
-.navbar__brand img {
-  display: none !important;
-}
-
 .navbar__title {
+  display: none;
   font-size: 1.75rem;
 }
 
@@ -138,7 +145,7 @@
 .footer .footer-link-shared {
   display: grid;
   grid-template-columns: repeat(auto-fill, 16px);
-  grid-gap: 20px;
+  grid-gap: 27px;
   align-items: center;
   height: 2rem;
 }

@@ -12,12 +12,13 @@
 
 | Name | Required | Comments |
 | ---- | -------- | -------- |
-| [endpoint](go-storage/pairs/endpoint.md) | Y | endpoint |
-| [work_dir](go-storage/pairs/work_dir.md) | N | work dir |
+| [endpoint](../pairs/endpoint.md) | Y | endpoint |
+| gateway                          | Y | gateway |
+| [work_dir](../pairs/work_dir.md) | N | work dir |
 
 #### Examples
 
-Init storager (see [this page](go-storage/operations/index.md#how-to-initialize-a-servicerstorager) for details)
+Init storager (see [this page](../operations/index.md#how-to-initialize-a-servicerstorager) for details)
 
 ```go
 import (
@@ -25,7 +26,7 @@ import (
 	"github.com/beyondstorage/go-storage/v4/services"
 )
 
-store, err := services.NewStoragerFromString("ipfs:///<work_dir>?endpoint=<ipfs_http_api_endpoint>") // endpoint example: http:127.0.0.1:5001
+store, err := services.NewStoragerFromString("ipfs:///<work_dir>?endpoint=<ipfs_http_api_endpoint>&gateway=<ipfs_http_gateway>") // endpoint example: http:127.0.0.1:5001
 if err != nil {
     log.Fatalf("ipfs new service: %v", err)
 }
@@ -41,3 +42,5 @@ This service implements following interfaces:
 - [Copier](../operations/copy.md)
 
 - [Mover](../operations/move.md)
+
+- [QuerySignHTTPRead](../operations/storage_http_signer/query_sign_http_read.md)

@@ -1,6 +1,6 @@
 {
   "title": {
-    "message": "BeyondStorage",
+    "message": "beyondstorage",
     "description": "The title in the navbar"
   },
   "item.label.Community": {
@@ -16,27 +16,39 @@
     "description": "Navbar item with label Projects"
   },
   "item.label.Documentation": {
-    "message": "Documentation",
+    "message": "文档",
     "description": "Navbar item with label Documentation"
   },
   "item.label.go-storage": {
     "message": "go-storage",
     "description": "Navbar item with label go-storage"
   },
-  "item.label.go-ftp-server": {
-    "message": "go-ftp-server",
-    "description": "Navbar item with label go-ftp-server"
-  },
-  "item.label.Data migration": {
-    "message": "Data migration",
-    "description": "Navbar item with label Data migration"
-  },
   "item.label.Activity": {
-    "message": "Activity",
+    "message": "动态",
     "description": "Navbar item with label Activity"
   },
   "item.label.Forum": {
-    "message": "Forum",
+    "message": "论坛",
     "description": "Navbar item with label Forum"
+  },
+  "item.label.BeyondTP": {
+    "message": "BeyondTP",
+    "description": "Navbar item with label BeyondTP"
+  },
+  "item.label.General": {
+    "message": "General",
+    "description": "Navbar item with label General"
+  },
+  "item.label.BeyondFS": {
+    "message": "BeyondFS",
+    "description": "Navbar item with label BeyondFS"
+  },
+  "item.label.BeyondFTP": {
+    "message": "BeyondFTP",
+    "description": "Navbar item with label BeyondFTP"
+  },
+  "item.label.BeyondCTL": {
+    "message": "BeyondCTL",
+    "description": "Navbar item with label BeyondCTL"
   }
 }

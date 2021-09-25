@@ -186,7 +186,7 @@ The name of current service, should be unique.
 implement = ["multiparter"]
 ```
 
-We should also add related `UnimplementedMultiparter` stub into our `Storage` struct.
+- We should also add related `UnimplementedMultiparter` stub into our `Storage` struct.
 
 `namespace` MUST add `new` section to describe how to initiate this namespace:
 

@@ -1,0 +1,1 @@
+`QuerySignHTTPRead` is used to read data from the file by using query parameters to authenticate requests.
